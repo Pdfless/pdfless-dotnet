@@ -5,7 +5,7 @@
     <Authors>Nicolas Law-dune</Authors>
     <Company>Synapsium</Company>
     <Product>Pdfless</Product>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <PackageId>Pdfless</PackageId>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://www.pdfless.com/</PackageProjectUrl>
@@ -15,10 +15,12 @@
     <PackageDescription>SDK to consume Pdfless API</PackageDescription>
     <PackageTags>Pdfless;PDF;Microsoft;Azure;.NET Core</PackageTags>
     <Copyright>Synapsium Pdfless, Inc. 2023</Copyright>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
     <None Include="icon.png" Pack="true" Visible="false" PackagePath="" />
+    <None Include="README.md" Pack="true" PackagePath=""/>
   </ItemGroup>
 
   <ItemGroup>
