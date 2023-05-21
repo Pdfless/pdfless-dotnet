@@ -1,19 +1,34 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
-trigger:
-- main
+name: 1.0$(rev:.r)
+trigger: none
 
 pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+  - task: UseDotNet@2
+    displayName: "dotnet restore"
+    inputs:
+      packageType: 'sdk'
+  - task: DotNetCoreCLI@2
+    displayName: "dotnet restore"
+    inputs:
+      command: "restore"
+      projects: "src/Pdfless/Pdfless.csproj"
+  - task: DotNetCoreCLI@2
+    displayName: "dotnet build"
+    inputs:
+      command: "build"
+      projects: "./src/Pdfless/Pdfless.csproj"
+      arguments: "-c Release"
+  - task: DotNetCoreCLI@2
+    displayName: 'dotnet pack'
+    inputs:
+      command: pack
+      packagesToPack: src/Pdfless/Pdfless.csproj
+      versioningScheme: byBuildNumber
+  - task: NuGetCommand@2
+    displayName: 'NuGet push'
+    inputs:
+      command: push
+      nuGetFeedType: external
+      publishFeedCredentials: Nuget
