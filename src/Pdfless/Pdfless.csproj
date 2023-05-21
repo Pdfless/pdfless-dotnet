@@ -5,15 +5,21 @@
     <Authors>Nicolas Law-dune</Authors>
     <Company>Synapsium</Company>
     <Product>Pdfless</Product>
+    <Version>1.0.0</Version>
+    <PackageId>Pdfless</PackageId>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://www.pdfless.com/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Pdfless/pdfless-dotnet.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageIconUrl>https://sendgrid.com/wp-content/themes/sgdotcom/pages/resource/brand//2016/SendGrid-Logomark.png</PackageIconUrl>
+    <PackageIcon>icon.png</PackageIcon>
     <PackageDescription>SDK to consume Pdfless API</PackageDescription>
     <PackageTags>Pdfless;PDF;Microsoft;Azure;.NET Core</PackageTags>
     <Copyright>Synapsium Pdfless, Inc. 2023</Copyright>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="icon.png" Pack="true" Visible="false" PackagePath="" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.32" />
