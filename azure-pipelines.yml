@@ -6,7 +6,7 @@ pool:
 
 steps:
   - task: UseDotNet@2
-    displayName: "dotnet restore"
+    displayName: "dotnet install sdk"
     inputs:
       packageType: 'sdk'
   - task: DotNetCoreCLI@2

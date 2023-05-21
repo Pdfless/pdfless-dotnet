@@ -5,7 +5,6 @@
     <Authors>Nicolas Law-dune</Authors>
     <Company>Synapsium</Company>
     <Product>Pdfless</Product>
-    <Version>1.0.1</Version>
     <PackageId>Pdfless</PackageId>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://www.pdfless.com/</PackageProjectUrl>
